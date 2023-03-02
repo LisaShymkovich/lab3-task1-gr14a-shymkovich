@@ -1,8 +1,11 @@
-/* hello.c */
+//
+//  Created by Елизавета Шимкович on 1.03.23.
+//
+
 #include <stdio.h>
 
-void main (void)
+int main(int argc, const char * argv[])
 {
-	printf ("Hello World\n");
-	printf ("Goodbye World\n");
+  return 0;
 }
+
