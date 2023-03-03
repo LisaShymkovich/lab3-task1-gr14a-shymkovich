@@ -13,6 +13,22 @@ int Compare(const void *a, const void *b)
     return *(int*)a - *(int*)b;
 }
 
+int seed = 0;
+int*  Random_Class_Height(const int ARRAY_SIZE)
+{
+    int* my_array = (int*) malloc(ARRAY_SIZE * sizeof(int));
+    if (seed == 0)
+    {
+        seed = time(NULL);
+        srand(seed);
+    }
+    for (int i = 0; i < ARRAY_SIZE; i++)
+    {
+        my_array[i] = Randomizer(150, 200);
+    }
+    return my_array;
+}
+
 
 int Randomizer (int min, int max)
 {
