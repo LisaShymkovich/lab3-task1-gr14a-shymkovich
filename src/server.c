@@ -12,3 +12,46 @@ int Compare(const void *a, const void *b)
 {
     return *(int*)a - *(int*)b;
 }
+
+
+int Randomizer (int min, int max)
+{
+    return rand()%(max-min+1) + min;
+}
+
+void Proccess(int* array1, int* array2, const int ARRAY_SIZE)
+{
+    printf("Heigths of first class:\n");
+    for(int i = 0 ; i < ARRAY_SIZE; i++)
+        {
+            printf("%d. ", i+1);
+            printf("%d sm\n", array1[i]);
+        }
+    
+    printf("\n");
+    printf("Heigths of first class:\n");
+    for(int i = 0 ; i < ARRAY_SIZE; i++)
+    {
+        printf("%d. ", i+1);
+        printf("%d sm\n", array2[i]);
+    }
+    
+    printf("\n");
+    
+    
+    if (Compare(&array1[ARRAY_SIZE-3], &array2[ARRAY_SIZE-3])>0)
+    {
+        printf("The person in first class is taller ");
+    }
+    
+    if (Compare(&array1[ARRAY_SIZE-3], &array2[ARRAY_SIZE-3])<0)
+    {
+        printf("The person in second class is taller ");
+    }
+    
+    if (Compare(&array1[ARRAY_SIZE-3], &array2[ARRAY_SIZE-3])==0)
+    {
+        printf("The person in first class and in second are the same height");
+    }
+}
+
